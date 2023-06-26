@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_gpt/screens/cria_conta/cria_conta_page.dart';
-import 'package:recipe_gpt/screens/home/home_page.dart';
-import 'package:recipe_gpt/shared/constants.dart';
-import 'package:recipe_gpt/shared/widgets/button_widget.dart';
-import 'package:recipe_gpt/shared/widgets/text_field_widget.dart';
+import 'package:recipe_gpt/presentation/screens/cria_conta/cria_conta_page.dart';
+import 'package:recipe_gpt/presentation/screens/home/home_page.dart';
+import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/presentation/shared/widgets/button_widget.dart';
+import 'package:recipe_gpt/presentation/shared/widgets/text_field_widget.dart';
 
 class LoginBody extends StatefulWidget {
   const LoginBody({super.key});
@@ -27,7 +27,7 @@ class _LoginBodyState extends State<LoginBody> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              "FalconEye",
+              appName,
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w900,
@@ -41,14 +41,14 @@ class _LoginBodyState extends State<LoginBody> {
             const SizedBox(height: 15),
             TextFieldWidget(
               controller: passwordController,
-              hint: 'senha',
+              hint: 'password',
               obscure: true,
             ),
             const SizedBox(height: 15),
             ButtonWidget(
-              label: 'entrar',
+              label: 'sign in',
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const HomePage(),
@@ -57,12 +57,12 @@ class _LoginBodyState extends State<LoginBody> {
               },
             ),
             const SizedBox(height: 20),
-            const Text(
-              'esqueceu sua senha?',
-              style: TextStyle(
-                fontSize: 16,
-                color: AppColors.gray,
-              ),
+            Text(
+              'forgot password?',
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineSmall
+                  ?.copyWith(color: AppColors.gray),
             ),
             const SizedBox(height: 20),
             InkWell(
@@ -74,13 +74,13 @@ class _LoginBodyState extends State<LoginBody> {
                   ),
                 );
               },
-              child: const Text(
-                'Ainda não tem conta?\nCadastre aqui',
+              child: Text(
+                'don\'t you have an account?\ncreate one now!',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 13,
-                  color: AppColors.gray,
-                ),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyLarge
+                    ?.copyWith(color: AppColors.gray),
               ),
             ),
           ],

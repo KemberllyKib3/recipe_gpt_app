@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_gpt/shared/widgets/button_widget.dart';
-import 'package:recipe_gpt/shared/widgets/text_field_widget.dart';
+import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/presentation/shared/widgets/button_widget.dart';
+import 'package:recipe_gpt/presentation/shared/widgets/text_field_widget.dart';
 
 class CriaContaBody extends StatefulWidget {
   const CriaContaBody({super.key});
@@ -26,44 +27,41 @@ class _CriaContaBodyState extends State<CriaContaBody> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              "FalconEye",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w900,
-              ),
+            Text(
+              appName,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(height: 5),
-            const Text(
-              "crie sua conta",
-              style: TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w400,
-              ),
+            Text(
+              "create your account",
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyLarge
+                  ?.copyWith(color: AppColors.gray),
             ),
             const SizedBox(height: 30),
             TextFieldWidget(
               controller: nomeController,
-              hint: 'nome',
+              hint: 'first name',
             ),
             const SizedBox(height: 15),
             TextFieldWidget(
               controller: sobrenomeController,
-              hint: 'sobrenome',
+              hint: 'last name',
             ),
             const SizedBox(height: 15),
             TextFieldWidget(
               controller: emailController,
-              hint: 'e-mail',
+              hint: 'email',
             ),
             const SizedBox(height: 15),
             TextFieldWidget(
               controller: senhaController,
-              hint: 'senha',
+              hint: 'password',
             ),
             const SizedBox(height: 15),
             ButtonWidget(
-              label: 'criar',
+              label: 'create',
               onTap: () {},
             ),
           ],

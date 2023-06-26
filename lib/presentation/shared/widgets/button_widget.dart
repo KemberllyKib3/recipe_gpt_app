@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_gpt/shared/constants.dart';
 
 class ButtonWidget extends StatelessWidget {
   final String label;
@@ -27,10 +26,10 @@ class ButtonWidget extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               label.toLowerCase(),
-              style: const TextStyle(
-                fontSize: 18,
-                color: AppColors.white,
-              ),
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineMedium
+                  ?.copyWith(color: Colors.white),
             ),
           ),
         ),

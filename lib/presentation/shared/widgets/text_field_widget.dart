@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_gpt/shared/constants.dart';
+import 'package:recipe_gpt/presentation/shared/constants.dart';
 
 class TextFieldWidget extends StatelessWidget {
   final TextEditingController controller;
@@ -20,13 +20,17 @@ class TextFieldWidget extends StatelessWidget {
       obscureText: obscure,
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle: const TextStyle(fontSize: 18),
+        hintStyle: Theme.of(context)
+            .textTheme
+            .headlineMedium
+            ?.copyWith(color: AppColors.gray),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(width: 2)),
         border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(color: AppColors.black, width: 2)),
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: AppColors.black, width: 2),
+        ),
       ),
     );
   }
