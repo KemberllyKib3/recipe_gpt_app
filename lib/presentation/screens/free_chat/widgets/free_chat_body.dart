@@ -14,7 +14,7 @@ class FreeChatBody extends StatefulWidget {
 class _FreeChatBodyState extends State<FreeChatBody> {
   final TextEditingController controller = TextEditingController();
 
-  bool hasContent = true;
+  bool hasContent = false;
 
   @override
   Widget build(BuildContext context) {

@@ -45,7 +45,7 @@ class _LoginBodyState extends State<LoginBody> {
               obscure: true,
             ),
             const SizedBox(height: 15),
-            ButtonWidget(
+            ButtonWidget.primary(
               label: 'sign in',
               onTap: () {
                 Navigator.pushReplacement(

@@ -37,12 +37,12 @@ class FreeChatEmptyWidget extends StatelessWidget {
               maxWidth: MediaQuery.sizeOf(context).width * 0.5,
             ),
             child: Text(
-              "this is a free text chat you can ask whatever you want, but try to type delicious sandwich recipe"
+              "this is a free text chat you can ask whatever you want, try \"delicious sandwich recipe\""
                   .toLowerCase(),
               textAlign: TextAlign.center,
               style: Theme.of(context)
                   .textTheme
-                  .bodyLarge
+                  .bodyMedium
                   ?.copyWith(color: AppColors.white),
             ),
           ),

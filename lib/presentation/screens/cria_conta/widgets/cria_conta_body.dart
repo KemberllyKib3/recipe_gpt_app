@@ -60,7 +60,7 @@ class _CriaContaBodyState extends State<CriaContaBody> {
               hint: 'password',
             ),
             const SizedBox(height: 15),
-            ButtonWidget(
+            ButtonWidget.primary(
               label: 'create',
               onTap: () {},
             ),
