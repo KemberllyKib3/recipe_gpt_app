@@ -3,12 +3,14 @@ import 'package:recipe_gpt/presentation/shared/constants.dart';
 
 class PromptSettingWidget extends StatelessWidget {
   final String title;
+  final String? subtitle;
   final Widget setting;
 
   const PromptSettingWidget({
     super.key,
     required this.title,
     required this.setting,
+    this.subtitle,
   });
 
   @override
@@ -16,7 +18,7 @@ class PromptSettingWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 10),
+        const SizedBox(height: 15),
         Text(
           title.toLowerCase(),
           style: Theme.of(context)
@@ -24,7 +26,15 @@ class PromptSettingWidget extends StatelessWidget {
               .bodyLarge
               ?.copyWith(color: AppColors.white),
         ),
-        const SizedBox(height: 5),
+        if (subtitle != null)
+          Text(
+            subtitle!.toLowerCase(),
+            style: Theme.of(context)
+                .textTheme
+                .bodySmall
+                ?.copyWith(color: AppColors.gray),
+          ),
+        const SizedBox(height: 8),
         Row(children: [Expanded(child: setting)]),
       ],
     );

@@ -10,4 +10,10 @@ class AppColors {
   static const Color greenSender = Color(0xFF025C4C);
   static const Color gpt = Color(0xFF353746);
   static const Color prompt = Color(0xFF3E3F4A);
+
+  static const Color error = Color(0xFFFF4A4A);
+  static const Color warning = Color(0xFFF6F057);
+  static const Color success = Color(0xFF57F65E);
+  static const Color info = Color(0xFF57D0F6);
+
 }

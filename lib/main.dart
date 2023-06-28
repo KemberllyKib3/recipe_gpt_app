@@ -10,6 +10,7 @@ void main() {
   if (Platform.isWindows || Platform.isMacOS) {
     setWindowTitle("Recipe GPT");
     setWindowMinSize(const Size(450, 600));
+    setWindowMaxSize(const Size(550, double.infinity));
   }
   if (Platform.isLinux) setWindowTitle("Recipe GPT");
 

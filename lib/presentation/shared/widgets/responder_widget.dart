@@ -11,7 +11,7 @@ class ResponderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(10, 13, 20, 13),
+      padding: const EdgeInsets.fromLTRB(20, 13, 20, 13),
       decoration: const BoxDecoration(
         color: AppColors.gpt,
       ),

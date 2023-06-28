@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:recipe_gpt/presentation/screens/free_chat/free_chat_page.dart';
 import 'package:recipe_gpt/presentation/screens/home/widgets/action_button_widget.dart';
 import 'package:recipe_gpt/presentation/screens/meal_planner/meal_planner_page.dart';
+import 'package:recipe_gpt/presentation/screens/my_fridge/my_fridge_page.dart';
+import 'package:recipe_gpt/presentation/screens/romantic_dinner/romantic_dinner_page.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
@@ -45,7 +47,14 @@ class HomeBody extends StatelessWidget {
             children: [
               ActionButtonWidget(
                 label: "what do you have in your fridge?",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MyFridgePage(),
+                    ),
+                  );
+                },
               ),
               ActionButtonWidget(
                 label: "meal planner",
@@ -59,7 +68,7 @@ class HomeBody extends StatelessWidget {
                 },
               ),
               ActionButtonWidget(
-                label: "make me a surprise dish",
+                label: "surprise dish",
                 onTap: () {},
               ),
               ActionButtonWidget(
@@ -74,8 +83,15 @@ class HomeBody extends StatelessWidget {
                 },
               ),
               ActionButtonWidget(
-                label: "do you have a romantic date tonight?",
-                onTap: () {},
+                label: "romantic dinner",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const RomanticDinnerPage(),
+                    ),
+                  );
+                },
               ),
             ],
           ),

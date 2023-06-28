@@ -6,6 +6,7 @@ class ItemChipWidget extends StatelessWidget {
   final IconButton? trailing;
   final bool isSelected;
   final VoidCallback? onTap;
+  final bool isExpandable;
 
   factory ItemChipWidget.withIcon({
     required String label,
@@ -13,27 +14,31 @@ class ItemChipWidget extends StatelessWidget {
   }) =>
       ItemChipWidget(
         label: label,
-        isSelected: true,
+        isSelected: false,
         onTap: null,
         trailing: trailing,
+        isExpandable: false,
       );
 
   factory ItemChipWidget.selectable({
     required String label,
     required bool isSelected,
     required VoidCallback onTap,
+    bool isExpandable = false,
   }) =>
       ItemChipWidget(
         label: label,
         isSelected: isSelected,
         onTap: onTap,
         trailing: null,
+        isExpandable: isExpandable,
       );
 
   const ItemChipWidget({
     super.key,
     required this.label,
     required this.isSelected,
+    required this.isExpandable,
     this.trailing,
     this.onTap,
   });
@@ -46,7 +51,9 @@ class ItemChipWidget extends StatelessWidget {
         onTap: onTap,
         borderRadius: BorderRadius.circular(10),
         child: Ink(
-          padding: const EdgeInsets.all(10),
+          padding: (trailing != null)
+              ? const EdgeInsets.only(left: 10)
+              : const EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: isSelected ? AppColors.gray : AppColors.darkerBackground,
             borderRadius: BorderRadius.circular(10),
@@ -54,14 +61,23 @@ class ItemChipWidget extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
-                label,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium
-                    ?.copyWith(color: AppColors.white),
-              ),
-              if (trailing != null) const SizedBox(width: 5),
+              isExpandable
+                  ? Expanded(
+                      child: Text(
+                        label,
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyMedium
+                            ?.copyWith(color: AppColors.white),
+                      ),
+                    )
+                  : Text(
+                      label,
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyMedium
+                          ?.copyWith(color: AppColors.white),
+                    ),
               if (trailing != null) trailing!,
             ],
           ),

@@ -20,67 +20,86 @@ class _LoginBodyState extends State<LoginBody> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 50),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Form(
         key: formKey,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              appName,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w900,
+            Expanded(
+              flex: 9,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    appName,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    "welcome back",
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyLarge
+                        ?.copyWith(color: AppColors.gray),
+                  ),
+                  const SizedBox(height: 50),
+                  TextFieldWidget(
+                    controller: emailController,
+                    hint: 'e-mail',
+                  ),
+                  const SizedBox(height: 15),
+                  TextFieldWidget(
+                    controller: passwordController,
+                    hint: 'password',
+                    obscure: true,
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 25),
-            TextFieldWidget(
-              controller: emailController,
-              hint: 'e-mail',
-            ),
-            const SizedBox(height: 15),
-            TextFieldWidget(
-              controller: passwordController,
-              hint: 'password',
-              obscure: true,
-            ),
-            const SizedBox(height: 15),
-            ButtonWidget.primary(
-              label: 'sign in',
-              onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const HomePage(),
+            Expanded(
+              flex: 3,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ButtonWidget.primary(
+                    label: 'sign in',
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomePage(),
+                        ),
+                      );
+                    },
                   ),
-                );
-              },
-            ),
-            const SizedBox(height: 20),
-            Text(
-              'forgot password?',
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineSmall
-                  ?.copyWith(color: AppColors.gray),
-            ),
-            const SizedBox(height: 20),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const CriaContaPage(),
+                  const SizedBox(height: 15),
+                  Text(
+                    'forgot password?',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall
+                        ?.copyWith(color: AppColors.gray),
                   ),
-                );
-              },
-              child: Text(
-                'don\'t you have an account?\ncreate one now!',
-                textAlign: TextAlign.center,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyLarge
-                    ?.copyWith(color: AppColors.gray),
+                  const SizedBox(height: 15),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CriaContaPage(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'don\'t you have an account?\ncreate one now!',
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyLarge
+                          ?.copyWith(color: AppColors.gray),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

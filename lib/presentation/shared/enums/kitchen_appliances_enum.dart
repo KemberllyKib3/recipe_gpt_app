@@ -1,14 +1,14 @@
 enum KitchenAppliancesEnum {
   oven("oven"),
-  stoveCooktop("stoveCooktop"),
-  pressureCooker("pressureCooker"),
+  stoveCooktop("stove or cooktop"),
   microwave("microwave"),
+  pressureCooker("pressure cooker"),
   grill("grill"),
   blender("blender"),
-  slowCooker("slowCooker"),
-  sandwichMaker("sandwichMaker"),
-  airFryer("airFryer"),
-  toaster("toaster");
+  toaster("toaster"),
+  airFryer("air fryer"),
+  sandwichMaker("sandwich maker"),
+  slowCooker("slow cooker");
 
   String get label => _label;
 
