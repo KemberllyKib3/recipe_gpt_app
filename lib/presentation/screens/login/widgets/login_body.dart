@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_gpt/presentation/screens/cook_level/cook_level_page.dart';
 import 'package:recipe_gpt/presentation/screens/cria_conta/cria_conta_page.dart';
 import 'package:recipe_gpt/presentation/screens/home/home_page.dart';
 import 'package:recipe_gpt/presentation/shared/constants.dart';
@@ -67,7 +68,7 @@ class _LoginBodyState extends State<LoginBody> {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const CookLevelPage(),
                         ),
                       );
                     },

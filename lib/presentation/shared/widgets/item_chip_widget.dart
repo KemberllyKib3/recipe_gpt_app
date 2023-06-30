@@ -55,7 +55,7 @@ class ItemChipWidget extends StatelessWidget {
               ? const EdgeInsets.only(left: 10)
               : const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: isSelected ? AppColors.gray : AppColors.darkerBackground,
+            color: isSelected ? AppColors.gray.withOpacity(0.5) : AppColors.darkerBackground,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Row(

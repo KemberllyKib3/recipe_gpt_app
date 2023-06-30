@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_gpt/presentation/screens/meal_planner/widgets/counter_widget.dart';
+import 'package:recipe_gpt/presentation/screens/response/response_page.dart';
 import 'package:recipe_gpt/presentation/shared/constants.dart';
 import 'package:recipe_gpt/presentation/shared/enums/enums.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/button_widget.dart';
@@ -84,7 +85,8 @@ class _MealPlannerBodyState extends State<MealPlannerBody> {
                   ),
                   PromptSettingWidget(
                     title: 'dietary restrictions',
-                    subtitle: 'what can\'t you eat?',
+                    subtitle:
+                        'are you on a diet or do you have anything you can\'t eat?',
                     setting: ItemSelectorWidget(
                       items: DietaryRestrictionsEnum.values
                           .map((e) => e.label)
@@ -107,7 +109,18 @@ class _MealPlannerBodyState extends State<MealPlannerBody> {
           ),
           child: ButtonWidget.white(
             label: 'launch',
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ResponsePage(
+                    title: 'meal planner',
+                    typeOfResponse: TypeResponseEnum.mealPlan,
+                    typeCommand: TypeCommandEnum.mealPlanCommand,
+                  ),
+                ),
+              );
+            },
           ),
         ),
       ],

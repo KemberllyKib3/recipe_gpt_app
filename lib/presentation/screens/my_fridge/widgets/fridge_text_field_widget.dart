@@ -50,7 +50,7 @@ class _FridgeTextFieldWidgetState extends State<FridgeTextFieldWidget> {
           borderRadius: BorderRadius.circular(10),
         ),
         suffixIcon: IconButton(
-          disabledColor: AppColors.gray,
+          disabledColor: AppColors.gray.withOpacity(0.5),
           onPressed: hasText
               ? () {
                   widget.onAddPressed(controller.text);

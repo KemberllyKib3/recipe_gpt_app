@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:recipe_gpt/presentation/shared/app_colors.dart';
+import 'package:recipe_gpt/presentation/shared/widgets/assets.dart';
 
 class ActionButtonWidget extends StatelessWidget {
   final String label;
+  final Widget? icon;
   final VoidCallback onTap;
 
   const ActionButtonWidget({
     super.key,
     required this.label,
     required this.onTap,
+    this.icon,
   });
 
   @override
@@ -28,10 +32,16 @@ class ActionButtonWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Icon(
-                Icons.add,
-                color: AppColors.white,
-              ),
+              icon ??
+                  SvgPicture.asset(
+                    Assets.chefHat,
+                    height: 25,
+                    width: 25,
+                    colorFilter: const ColorFilter.mode(
+                      Colors.white,
+                      BlendMode.srcIn,
+                    ),
+                  ),
               Text(
                 label.toLowerCase(),
                 style: Theme.of(context)

@@ -58,7 +58,7 @@ class _RomanticDinnerBodyState extends State<RomanticDinnerBody> {
                   ),
                   PromptSettingWidget(
                     title: 'dietary restrictions',
-                    subtitle: 'what can\'t you eat?',
+                    subtitle: 'are you on a diet or do you have anything you can\'t eat?',
                     setting: ItemSelectorWidget(
                       items: DietaryRestrictionsEnum.values
                           .map((e) => e.label)

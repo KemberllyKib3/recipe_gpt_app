@@ -1,54 +1,84 @@
 # Meal planner 
-Pretend that you are: 
-[level]
+Can you help me with a personalized meal plan for [nDays] days? 
 
-Situation:
-I'm looking to create an efficient and balanced meal plan. 
-
-I need meals for [nDays] days. 
-My food preferences are [preferences]
-I have some food restrictions as [restrictions]
-I follow a [diet] diet
-My maximum budget for ingredients is [budgetAmount].
-
-Organize in: 
-Name of dishes or descriptions
-Preparation time
-Recipes difficulty
-
-Ingredients
-Instructions on how to prepare
-
-Tips and suggestions
-
-
-==========================
-
-
-Pretend that you are: 
-Amateur Cook
-
-Situation:
-I'm looking to create an efficient and balanced meal plan to prepare one-time for 5 days 
-I need 2 meals per day.
-I only have 1:30 hours to cook all meals
-My food preferences are beef, chicken, rice, potatoes
-I have some food restrictions as nut-free
+My dietary preferences are [dietaryPreferences]. 
+I have a goal of [calorieMacronutrientGoals]. 
+I would like [nMeals] in a day.
+I like [cuisinePreferences] cuisine. 
+I have [dietaryRestrictions] to consider. 
+I am a [level] cook and have [time] minutes for meal preparation.
 
 
 Follow this pattern:
 [Day 1]: 
 - [Meal 1]
-- [Meal 2]
+- [Meal n]
+...
+[Day n]: 
+- [Meal 1]
+- [Meal n]
 ...
 
 Preparation: 
 [Preparation time] - [dificulty]
 
 Ingredients
-Instructions on how to prepare
-Instructions for organized storage for the 5 days
+how to prepare
+Instructions for organized storage
 
 Tips and suggestions
 
 
+
+=========
+
+
+Can you help me with a personalized meal plan for [5] days? 
+
+My dietary preferences are [beef, chicken, rice]. 
+I have a goal of [2000] kcal. 
+I would like [2] in a day.
+I like [brazilian] cuisine. 
+I have [nuts-free] to consider. 
+I am a [amateur] cook and have [60] minutes for meal preparation.
+
+
+Follow this pattern:
+[Day 1]: 
+- [Meal 1]
+- [Meal n]
+...
+[Day n]: 
+- [Meal 1]
+- [Meal n]
+...
+
+Preparation: 
+[Preparation time] - [dificulty]
+
+Ingredients
+how to prepare
+Instructions for organized storage
+
+Tips and suggestions
+
+=====
+
+Can you help me to take all those ingredients from all dishes to make a shopping list?
+
+I need this to export in JSON as follow:
+{
+    "shopping_list": "Meal plan for [nDays]",
+    "description": "exported in [date] from [Recipe GPT]",
+    "items": [
+        {
+            "product_name": [itemName],
+            "quantity": [amount]
+        },
+        ...
+        {
+            "product_name": [itemName],
+            "quantity": [amount]
+        }
+    ]
+}

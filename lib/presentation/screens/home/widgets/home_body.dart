@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:recipe_gpt/presentation/screens/free_chat/free_chat_page.dart';
 import 'package:recipe_gpt/presentation/screens/home/widgets/action_button_widget.dart';
 import 'package:recipe_gpt/presentation/screens/meal_planner/meal_planner_page.dart';
 import 'package:recipe_gpt/presentation/screens/my_fridge/my_fridge_page.dart';
 import 'package:recipe_gpt/presentation/screens/romantic_dinner/romantic_dinner_page.dart';
+import 'package:recipe_gpt/presentation/screens/surprise_dish/surprise_dish_page.dart';
+import 'package:recipe_gpt/presentation/shared/widgets/assets.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
@@ -58,6 +61,15 @@ class HomeBody extends StatelessWidget {
               ),
               ActionButtonWidget(
                 label: "meal planner",
+                icon: SvgPicture.asset(
+                  Assets.chefAutoHat,
+                  height: 30,
+                  width: 30,
+                  colorFilter: const ColorFilter.mode(
+                    Colors.white,
+                    BlendMode.srcIn,
+                  ),
+                ),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -69,10 +81,35 @@ class HomeBody extends StatelessWidget {
               ),
               ActionButtonWidget(
                 label: "surprise dish",
-                onTap: () {},
+                icon: SvgPicture.asset(
+                  Assets.chefAutoHat,
+                  height: 30,
+                  width: 30,
+                  colorFilter: const ColorFilter.mode(
+                    Colors.white,
+                    BlendMode.srcIn,
+                  ),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SurpriseDishPage(),
+                    ),
+                  );
+                },
               ),
               ActionButtonWidget(
                 label: "free text chat gpt",
+                icon: SvgPicture.asset(
+                  Assets.openAiLogo,
+                  height: 25,
+                  width: 25,
+                  colorFilter: const ColorFilter.mode(
+                    Colors.white,
+                    BlendMode.srcIn,
+                  ),
+                ),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -84,6 +121,15 @@ class HomeBody extends StatelessWidget {
               ),
               ActionButtonWidget(
                 label: "romantic dinner",
+                icon: SvgPicture.asset(
+                  Assets.chefHat,
+                  height: 25,
+                  width: 25,
+                  colorFilter: const ColorFilter.mode(
+                    Colors.white,
+                    BlendMode.srcIn,
+                  ),
+                ),
                 onTap: () {
                   Navigator.push(
                     context,

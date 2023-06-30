@@ -44,7 +44,7 @@ class _ChatTextFieldWidgetState extends State<ChatTextFieldWidget> {
             borderRadius: BorderRadius.circular(10),
           ),
           suffixIcon: IconButton(
-            disabledColor: AppColors.gray,
+            disabledColor: AppColors.gray.withOpacity(0.5),
             onPressed:
                 hasText ? () => widget.onSendPressed(widget.controller.text) : null,
             icon: Icon(

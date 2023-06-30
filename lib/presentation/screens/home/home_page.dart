@@ -9,11 +9,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: AppColors.white,
-      appBar: AppBarWidget(title: "Recipe GPT"),
-      drawer: DrawerPage(),
-      body: HomeBody(),
+      appBar: AppBarWidget.primary(title: "Recipe GPT"),
+      drawer: const DrawerPage(),
+      body: const HomeBody(),
     );
   }
 }

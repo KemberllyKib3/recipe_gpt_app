@@ -12,9 +12,9 @@ class RomanticDinnerPage extends StatefulWidget {
 class _RomanticDinnerPageState extends State<RomanticDinnerPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: AppBarWidget(title: "romantic dinner"),
-      body: RomanticDinnerBody(),
+    return Scaffold(
+      appBar: AppBarWidget.primary(title: "romantic dinner"),
+      body: const RomanticDinnerBody(),
     );
   }
 }

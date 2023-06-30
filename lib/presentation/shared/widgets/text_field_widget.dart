@@ -84,24 +84,5 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
         ],
       ),
     );
-    // TextFormField(
-    //   controller: controller,
-    //   obscureText: obscure,
-    //   cursorColor: AppColors.black,
-    //   decoration: InputDecoration(
-    //     hintText: hint,
-    //     hintStyle: Theme.of(context)
-    //         .textTheme
-    //         .headlineMedium
-    //         ?.copyWith(color: AppColors.gray),
-    //     enabledBorder: OutlineInputBorder(
-    //         borderRadius: BorderRadius.circular(10),
-    //         borderSide: const BorderSide(width: 2)),
-    //     border: OutlineInputBorder(
-    //       borderRadius: BorderRadius.circular(10),
-    //       borderSide: const BorderSide(color: AppColors.black, width: 2),
-    //     ),
-    //   ),
-    // );
   }
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:recipe_gpt/presentation/screens/drawer/widgets/list_tile_widget.dart';
 import 'package:recipe_gpt/presentation/screens/login/login_page.dart';
 import 'package:recipe_gpt/presentation/screens/profile/profile_page.dart';
 import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/presentation/shared/widgets/assets.dart';
 
 class DrawerPage extends StatelessWidget {
   const DrawerPage({super.key});
@@ -43,8 +45,15 @@ class DrawerPage extends StatelessWidget {
                                 color: AppColors.darkerBackground,
                                 borderRadius: BorderRadius.circular(50),
                               ),
-                              child: const Text('Icone',
-                                  style: TextStyle(color: AppColors.white)),
+                              child: SvgPicture.asset(
+                                Assets.appLogo,
+                                height: 25,
+                                width: 25,
+                                colorFilter: const ColorFilter.mode(
+                                  Colors.white,
+                                  BlendMode.srcIn,
+                                ),
+                              ),
                             ),
                             Text(
                               appName,

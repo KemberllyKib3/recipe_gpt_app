@@ -12,9 +12,9 @@ class MealPlannerPage extends StatefulWidget {
 class _MealPlannerPageState extends State<MealPlannerPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: AppBarWidget(title: 'meal planner'),
-      body: MealPlannerBody(),
+    return Scaffold(
+      appBar: AppBarWidget.primary(title: 'meal planner'),
+      body: const MealPlannerBody(),
     );
   }
 }

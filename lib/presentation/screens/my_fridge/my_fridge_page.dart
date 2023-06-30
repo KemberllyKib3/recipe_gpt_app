@@ -12,9 +12,9 @@ class MyFridgePage extends StatefulWidget {
 class _MyFridgePageState extends State<MyFridgePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: AppBarWidget(title: 'what do I have in my fridge?'),
-      body: MyFridgeBody(),
+    return Scaffold(
+      appBar: AppBarWidget.primary(title: 'what do I have in my fridge?'),
+      body: const MyFridgeBody(),
     );
   }
 }
