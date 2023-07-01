@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_gpt/presentation/screens/meal_planner/widgets/counter_widget.dart';
+import 'package:recipe_gpt/presentation/screens/response/response_page.dart';
 import 'package:recipe_gpt/presentation/shared/constants.dart';
 import 'package:recipe_gpt/presentation/shared/enums/enums.dart';
+import 'package:recipe_gpt/presentation/shared/utils/widget_functions.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/button_widget.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/item_selector_widget.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/prompt_setting_widget.dart';
@@ -76,7 +78,16 @@ class _SurpriseDishBodyState extends State<SurpriseDishBody> {
           ),
           child: ButtonWidget.white(
             label: 'launch',
-            onTap: () {},
+            onTap: () {
+              WidgetFunctions.push(
+                context,
+                (context) => const ResponsePage(
+                  title: 'surprise dish',
+                  typeOfResponse: TypeResponseEnum.recipe,
+                  typeCommand: TypeCommandEnum.surpriseDishCommand,
+                ),
+              );
+            },
           ),
         ),
       ],

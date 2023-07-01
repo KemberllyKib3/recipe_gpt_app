@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_gpt/presentation/screens/meal_planner/widgets/counter_widget.dart';
+import 'package:recipe_gpt/presentation/screens/response/response_page.dart';
 import 'package:recipe_gpt/presentation/screens/romantic_dinner/widgets/multi_text_field_widget.dart';
 import 'package:recipe_gpt/presentation/shared/constants.dart';
 import 'package:recipe_gpt/presentation/shared/enums/enums.dart';
+import 'package:recipe_gpt/presentation/shared/utils/widget_functions.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/button_widget.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/item_selector_widget.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/prompt_setting_widget.dart';
@@ -58,7 +60,8 @@ class _RomanticDinnerBodyState extends State<RomanticDinnerBody> {
                   ),
                   PromptSettingWidget(
                     title: 'dietary restrictions',
-                    subtitle: 'are you on a diet or do you have anything you can\'t eat?',
+                    subtitle:
+                        'are you on a diet or do you have anything you can\'t eat?',
                     setting: ItemSelectorWidget(
                       items: DietaryRestrictionsEnum.values
                           .map((e) => e.label)
@@ -99,7 +102,16 @@ class _RomanticDinnerBodyState extends State<RomanticDinnerBody> {
           ),
           child: ButtonWidget.white(
             label: 'launch',
-            onTap: () {},
+            onTap: () {
+              WidgetFunctions.push(
+                context,
+                (context) => const ResponsePage(
+                  title: 'romantic dinner',
+                  typeOfResponse: TypeResponseEnum.recipe,
+                  typeCommand: TypeCommandEnum.romanticDinnerCommand,
+                ),
+              );
+            },
           ),
         ),
       ],

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_gpt/presentation/screens/meal_planner/widgets/counter_widget.dart';
 import 'package:recipe_gpt/presentation/screens/my_fridge/widgets/fridge_text_field_widget.dart';
+import 'package:recipe_gpt/presentation/screens/response/response_page.dart';
 import 'package:recipe_gpt/presentation/shared/constants.dart';
 import 'package:recipe_gpt/presentation/shared/enums/cook_creativity_enum.dart';
 import 'package:recipe_gpt/presentation/shared/enums/enums.dart';
+import 'package:recipe_gpt/presentation/shared/utils/widget_functions.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/button_widget.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/item_selecteds_widget.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/item_selector_widget.dart';
@@ -113,7 +115,16 @@ class _MyFridgeBodyState extends State<MyFridgeBody> {
           ),
           child: ButtonWidget.white(
             label: 'launch',
-            onTap: () {},
+            onTap: () {
+              WidgetFunctions.push(
+                context,
+                (context) => const ResponsePage(
+                  title: 'what do I have in my fridge?',
+                  typeOfResponse: TypeResponseEnum.recipe,
+                  typeCommand: TypeCommandEnum.fridgeCommand,
+                ),
+              );
+            },
           ),
         ),
       ],

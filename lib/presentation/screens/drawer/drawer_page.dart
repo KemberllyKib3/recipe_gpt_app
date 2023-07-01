@@ -4,6 +4,7 @@ import 'package:recipe_gpt/presentation/screens/drawer/widgets/list_tile_widget.
 import 'package:recipe_gpt/presentation/screens/login/login_page.dart';
 import 'package:recipe_gpt/presentation/screens/profile/profile_page.dart';
 import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/presentation/shared/utils/widget_functions.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/assets.dart';
 
 class DrawerPage extends StatelessWidget {
@@ -18,7 +19,7 @@ class DrawerPage extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: ColoredBox(
+              child: Material(
                 color: AppColors.white,
                 child: SingleChildScrollView(
                   child: Column(
@@ -69,11 +70,9 @@ class DrawerPage extends StatelessWidget {
                         label: 'profile',
                         leading: Icons.person_outline_rounded,
                         onTap: () {
-                          Navigator.push(
+                          WidgetFunctions.push(
                             context,
-                            MaterialPageRoute(
-                              builder: (context) => const ProfilePage(),
-                            ),
+                            (context) => const ProfilePage(),
                           );
                         },
                       ),
@@ -118,11 +117,9 @@ class DrawerPage extends StatelessWidget {
                     leading: Icons.logout_rounded,
                     color: AppColors.error,
                     onTap: () {
-                      Navigator.pushReplacement(
+                      WidgetFunctions.pushReplacement(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) => const LoginPage(),
-                        ),
+                        (context) => const LoginPage(),
                       );
                     },
                   ),

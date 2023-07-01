@@ -51,26 +51,11 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
             decoration: InputDecoration(
               hintText: widget.hint,
               contentPadding: const EdgeInsets.symmetric(vertical: -5),
-              enabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide.none,
-                gapPadding: 0,
-              ),
-              focusedBorder: const OutlineInputBorder(
-                borderSide: BorderSide.none,
-                gapPadding: 0,
-              ),
-              disabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide.none,
-                gapPadding: 0,
-              ),
-              errorBorder: const OutlineInputBorder(
-                borderSide: BorderSide.none,
-                gapPadding: 0,
-              ),
-              border: const OutlineInputBorder(
-                borderSide: BorderSide.none,
-                gapPadding: 0,
-              ),
+              enabledBorder: InputBorder.none,
+              focusedBorder: InputBorder.none,
+              disabledBorder: InputBorder.none,
+              errorBorder: InputBorder.none,
+              border: InputBorder.none,
             ),
           ),
           if (hasContent)

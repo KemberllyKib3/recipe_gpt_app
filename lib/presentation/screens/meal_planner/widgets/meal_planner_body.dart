@@ -3,6 +3,7 @@ import 'package:recipe_gpt/presentation/screens/meal_planner/widgets/counter_wid
 import 'package:recipe_gpt/presentation/screens/response/response_page.dart';
 import 'package:recipe_gpt/presentation/shared/constants.dart';
 import 'package:recipe_gpt/presentation/shared/enums/enums.dart';
+import 'package:recipe_gpt/presentation/shared/utils/widget_functions.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/button_widget.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/item_selector_widget.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/prompt_setting_widget.dart';
@@ -110,14 +111,12 @@ class _MealPlannerBodyState extends State<MealPlannerBody> {
           child: ButtonWidget.white(
             label: 'launch',
             onTap: () {
-              Navigator.push(
+              WidgetFunctions.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => const ResponsePage(
-                    title: 'meal planner',
-                    typeOfResponse: TypeResponseEnum.mealPlan,
-                    typeCommand: TypeCommandEnum.mealPlanCommand,
-                  ),
+                (context) => const ResponsePage(
+                  title: 'meal planner',
+                  typeOfResponse: TypeResponseEnum.mealPlan,
+                  typeCommand: TypeCommandEnum.mealPlanCommand,
                 ),
               );
             },

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_gpt/presentation/screens/profile/widgets/text_field_tile_widget.dart';
 import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/presentation/shared/enums/cook_level_enum.dart';
+import 'package:recipe_gpt/presentation/shared/widgets/item_chip_widget.dart';
 
 class ProfileBody extends StatefulWidget {
   const ProfileBody({super.key});
@@ -40,6 +43,42 @@ class _ProfileBodyState extends State<ProfileBody> {
               ),
             ],
           ),
+        ),
+        TextFieldTileWidget(
+          initialText: 'Kemberlly Rocha',
+          hint: 'full name',
+          trailingIcon: Icons.edit_rounded,
+          bottomButtonLabel: 'save',
+          onSaved: (value) {
+            debugPrint(value);
+          },
+        ),
+        TextFieldTileWidget(
+          initialText: 'password',
+          obscureText: true,
+          hint: 'password',
+          trailingIcon: Icons.edit_rounded,
+          bottomButtonLabel: 'save',
+          onSaved: (value) {
+            debugPrint(value);
+          },
+        ),
+        TextFieldTileWidget(
+          initialText: CookLevelEnum.amateurCook.value,
+          hint: 'cook level',
+          trailingIcon: Icons.edit_rounded,
+          bottomButtonLabel: 'save',
+          onSaved: (value) {
+            debugPrint(value);
+          },
+        ),
+        TextFieldTileWidget(
+          initialText: 'shoplist unlimited plan',
+          hint: 'subscription',
+          trailingIcon: Icons.info_outline_rounded,
+          onTapIcon: () {
+            debugPrint('info');
+          },
         ),
       ],
     );

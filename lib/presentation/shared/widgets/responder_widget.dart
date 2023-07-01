@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/presentation/shared/enums/enums.dart';
+import 'package:recipe_gpt/presentation/shared/utils/widget_functions.dart';
+import 'package:recipe_gpt/presentation/shared/widgets/custom_toast_widget.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/small_action_button_widget.dart';
 
 class ResponderWidget extends StatelessWidget {
@@ -38,10 +41,11 @@ class ResponderWidget extends StatelessWidget {
             label: "copy to clipboard",
             onTap: () {
               Clipboard.setData(ClipboardData(text: text));
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text("copied to clipboard"),
-                ),
+
+              CustomToastWidget.show(
+                context,
+                typeToast: TypeToastEnum.normal,
+                message: "Copied to clipboard!",
               );
             },
           ),

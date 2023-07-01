@@ -35,12 +35,12 @@ Tips and suggestions
 
 Can you help me with a personalized meal plan for [5] days? 
 
-My dietary preferences are [beef, chicken, rice]. 
+My dietary preferences are [beef, chicken, rice, pasta]. 
 I have a goal of [2000] kcal. 
-I would like [2] in a day.
+I would like [2] meals per day.
 I like [brazilian] cuisine. 
-I have [nuts-free] to consider. 
-I am a [amateur] cook and have [60] minutes for meal preparation.
+I have [pork-free] to consider. 
+I am a [amateur] cook and have [120] minutes for meal preparation.
 
 
 Follow this pattern:

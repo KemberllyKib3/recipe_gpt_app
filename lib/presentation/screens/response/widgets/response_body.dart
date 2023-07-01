@@ -37,6 +37,7 @@ class _ResponseBodyState extends State<ResponseBody> {
             ),
           ),
         ),
+        const Column()
       ],
     );
   }
