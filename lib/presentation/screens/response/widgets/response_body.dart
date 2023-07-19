@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_gpt/shared/enums/enums.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/responder_widget.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/sender_widget.dart';
 
 class ResponseBody extends StatefulWidget {
   final String initialText;
+  final TypeResponseEnum typeOfResponse;
 
   const ResponseBody({
     super.key,
     required this.initialText,
+    required this.typeOfResponse,
   });
 
   @override

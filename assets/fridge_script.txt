@@ -1,12 +1,11 @@
 # Meal planner 
-Can you help me with a personalized meal plan for [nDays] days? 
+Can you help me with a personalized meal plan? 
 
-My dietary preferences are [dietaryPreferences]. 
-I have a goal of [calorieMacronutrientGoals]. 
-I would like [nMeals] in a day.
+My preferences are [foodPreferences]. 
+I would like [nMeals] in a day for [nDays] days.
 I like [cuisinePreferences] cuisine. 
-I have [dietaryRestrictions] to consider. 
-I am a [level] cook and have [time] minutes for meal preparation.
+I have [dietaryRestrictions] dietary to consider. 
+I am a [level] cook level and have [time] minutes for meal preparation.
 
 
 Follow this pattern:
@@ -19,14 +18,19 @@ Follow this pattern:
 - [Meal n]
 ...
 
-Preparation: 
-[Preparation time] - [dificulty]
+# Preparation time
+# Dificulty
+# Nutrition info
+- Calories
+- Proteins
+- Sugar
+- Fat
 
-Ingredients
-how to prepare
-Instructions for organized storage
+# Ingredients
+# How to prepare
 
-Tips and suggestions
+# Tips and suggestions
+# Instructions for organize these meals for [nDays]
 
 
 
@@ -39,7 +43,7 @@ My dietary preferences are [beef, chicken, rice, pasta].
 I have a goal of [2000] kcal. 
 I would like [2] meals per day.
 I like [brazilian] cuisine. 
-I have [pork-free] to consider. 
+I have [pork-free] dietary to consider. 
 I am a [amateur] cook and have [120] minutes for meal preparation.
 
 

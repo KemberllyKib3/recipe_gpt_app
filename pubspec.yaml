@@ -12,6 +12,8 @@ dependencies:
     sdk: flutter
 
   google_fonts: ^5.1.0
+  dartz: ^0.10.1
+  uuid: ^3.0.7
 
   fluttertoast: ^8.2.2
 
@@ -48,7 +50,7 @@ flutter_launcher_icons:
   adaptive_icon_foreground: "assets/icons/launcher/foreground.png"
   windows:
     generate: true
-    image_path: "assets/icons/launcher/appIconWindows.png"
+    image_path: "assets/icons/launcher/appIconWindows2.png"
     icon_size: 187
 
 # dart run flutter_native_splash:create

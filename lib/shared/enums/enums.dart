@@ -7,3 +7,4 @@ export 'cook_level_enum.dart';
 export 'type_response_enum.dart';
 export 'type_command_enum.dart';
 export 'type_toast_enum.dart';
+export 'type_sender_enum.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_gpt/presentation/shared/app_colors.dart';
-import 'package:recipe_gpt/presentation/shared/enums/enums.dart';
+import 'package:recipe_gpt/shared/enums/enums.dart';
 
 class CustomToastWidget {
   static void show(
