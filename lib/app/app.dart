@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_gpt/app/theme.dart';
+import 'package:recipe_gpt/shared/theme.dart';
 import 'package:recipe_gpt/presentation/screens/login/login_page.dart';
 
 class App extends StatefulWidget {

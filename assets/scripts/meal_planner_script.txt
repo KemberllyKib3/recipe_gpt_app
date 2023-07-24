@@ -1,0 +1,98 @@
+Can you help me with a personalized meal plan? 
+
+I would like [nMeals] meals per day for a [nDays] days plan.
+I like [cuisines] cuisine. 
+My dietary preferences are [preferences] and I have [restrictions] restrictions to be considered
+I am a [level] cook and have [time] minutes to cook.
+
+Also give me tips and suggetions about this dish
+and how to organize and storage.
+
+Give me the answer as a JSON like this:
+- [dificulty] can be: [easy, medium, hard, expert]
+{
+    "meal_plan": [meal_plan_name],
+    "n_days": [nDays],
+    "meals_per_day": [nMeals],
+    "meals": [
+        {
+            "day": "[day]"
+            "recipes": [                
+                {
+                    "title": "[title]",
+                    "description": "[description]",
+                    "dificulty": "[dificulty]",
+                    "time": "[time]",
+                    "ingredients": [
+                        "ingredient": [ingredient]
+                    ],
+                    "instructions": [
+                        [step]
+                    ],
+                    "nutrition_facts": {
+                        "calories": [calories]
+                        "fat": [fat]
+                        "carbohydrates": [carbohydrates]
+                        "sugar": [sugar]
+                        "protein": [protein]
+                    }
+                    "servings": [servings]
+                    "tips_suggestions": [tips],
+                    "storage_organization": "[storeOrganization]"
+                    "isFreezeble": [bool]
+                }
+            ]
+        }
+    ]
+}
+
+
+=========
+
+Can you help me with a personalized meal plan? 
+
+I would like [2] meals per day for a [3] days plan.
+I like [brazilian] cuisine. 
+My dietary preferences are [beef] and I have [no] restrictions to be considered.
+I am a [amateur] cook and have [60] minutes to cook.
+
+Also give me tips and suggetions about this dish
+and how to organize and storage.
+
+Give me the answer as a JSON like this:
+- [dificulty] can be: [easy, medium, hard, expert]
+{
+    "meal_plan": [meal_plan_name],
+    "n_days": [nDays],
+    "meals_per_day": [nMeals],
+    "meals": [
+        {
+            "day": "[day]"
+            "recipes": [                
+                {
+                    "title": "[title]",
+                    "description": "[description]",
+                    "dificulty": "[dificulty]",
+                    "time": "[time]",
+                    "ingredients": [
+                        [ingredient]
+                    ],
+                    "instructions": [
+                        [step]
+                    ],
+                    "nutrition_facts": {
+                        "calories": [calories]
+                        "fat": [fat]
+                        "carbohydrates": [carbohydrates]
+                        "sugar": [sugar]
+                        "protein": [protein]
+                    }
+                    "servings": [servings]
+                    "tips_suggestions": [tips],
+                    "storage_organization": "[storeOrganization]"
+                    "isFreezeble": [bool]
+                }
+            ]
+        }
+    ]
+}

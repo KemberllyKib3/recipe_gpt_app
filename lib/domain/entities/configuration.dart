@@ -6,4 +6,12 @@ class Configuration {
   Configuration({
     required this.cookLevel,
   });
+
+  Configuration copyWith({
+    CookLevelEnum? cookLevel,
+  }) {
+    return Configuration(
+      cookLevel: cookLevel ?? this.cookLevel,
+    );
+  }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/shared/constants.dart';
 
 class ButtonWidget extends StatelessWidget {
   final String label;

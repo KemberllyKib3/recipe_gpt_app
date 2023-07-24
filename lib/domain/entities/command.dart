@@ -1,7 +1,7 @@
 import 'package:recipe_gpt/shared/enums/enums.dart';
 
 class Command {
-  final String? initialPhrase;
+  final TypeCommandEnum type;
   final List<String>? cuisines;
   final List<String>? preferences;
   final List<String>? restrictions;
@@ -12,18 +12,29 @@ class Command {
   final int? nDays;
   final List<String>? ingredients;
   final List<String>? appliances;
+  final String? text;
   final String? other;
 
-  bool get isRecipeCommand =>
-      initialPhrase == TypeCommandEnum.surpriseDishCommand.label ||
-      initialPhrase == TypeCommandEnum.fridgeCommand.label ||
-      initialPhrase == TypeCommandEnum.romanticDinnerCommand.label;
+  bool get isRecipeCommand => type.isRecipeCommand;
 
-  bool get isMealPlanCommand =>
-      initialPhrase == TypeCommandEnum.mealPlanCommand.label;
+  Map<String, dynamic> get substitutions => {
+        'initialPhrase': type.label,
+        'cuisines': cuisines,
+        'preferences': preferences,
+        'restrictions': restrictions,
+        'creativity': creativity,
+        'level': level,
+        'time': time,
+        'nMealsPerDay': nMealsPerDay,
+        'nDays': nDays,
+        'ingredients': ingredients,
+        'appliances': appliances,
+        'text': text,
+        'other': other,
+      };
 
   Command({
-    this.initialPhrase,
+    required this.type,
     this.cuisines,
     this.preferences,
     this.restrictions,
@@ -34,6 +45,7 @@ class Command {
     this.nDays,
     this.ingredients,
     this.appliances,
+    this.text,
     this.other,
   });
 
@@ -43,7 +55,7 @@ class Command {
     required int time,
   }) =>
       Command(
-        initialPhrase: TypeCommandEnum.surpriseDishCommand.label,
+        type: TypeCommandEnum.surpriseDishCommand,
         restrictions: restrictions,
         level: level,
         time: time,
@@ -57,7 +69,7 @@ class Command {
     required String level,
   }) =>
       Command(
-        initialPhrase: TypeCommandEnum.fridgeCommand.label,
+        type: TypeCommandEnum.fridgeCommand,
         ingredients: ingredients,
         appliances: appliances,
         time: time,
@@ -68,7 +80,8 @@ class Command {
     required String text,
   }) =>
       Command(
-        initialPhrase: text,
+        type: TypeCommandEnum.freeTextCommand,
+        text: text,
       );
 
   factory Command.mealPlan({
@@ -80,7 +93,7 @@ class Command {
     required String level,
   }) =>
       Command(
-        initialPhrase: TypeCommandEnum.mealPlanCommand.label,
+        type: TypeCommandEnum.mealPlanCommand,
         nMealsPerDay: nMealsPerDay,
         nDays: nDays,
         time: time,
@@ -97,7 +110,7 @@ class Command {
     required String level,
   }) =>
       Command(
-        initialPhrase: TypeCommandEnum.mealPlanCommand.label,
+        type: TypeCommandEnum.romanticDinnerCommand,
         cuisines: cuisines,
         restrictions: restrictions,
         time: time,

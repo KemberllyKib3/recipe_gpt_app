@@ -1,0 +1,34 @@
+Can you provide me a good surprise dish? 
+
+I have [restrictions] dietary restrictions.
+I am a [level] cook I have only [time] minutes to cook.
+
+Also give me tips and suggetions about this dish
+and how to organize and storage.
+
+
+User this json format to answer:
+- [dificulty] can be: [easy, medium, hard, expert]
+{
+    "title": "[title]",
+    "description": "[description]",
+    "dificulty": "[dificulty]",
+    "time": "[time]",
+    "ingredients": [
+        [ingredient]
+    ],
+    "instructions": [
+        [step]
+    ],
+    "nutrition_facts": {
+        "calories": [calories]
+        "fat": [fat]
+        "carbohydrates": [carbohydrates]
+        "sugar": [sugar]
+        "protein": [protein]
+    }
+    "servings": [servings]
+    "tips_suggestions": [tips],
+    "storage_organization": "[storeOrganization]"
+    "isFreezeble": [bool]
+}

@@ -1,4 +1,4 @@
-import 'package:recipe_gpt/domain/models/user.dart';
+import 'package:recipe_gpt/domain/entities/user.dart';
 
 class ApplicationState {
   final bool isInitializing;

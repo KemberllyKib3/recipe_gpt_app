@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_gpt/presentation/screens/cria_conta/widgets/cria_conta_body.dart';
-import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/shared/constants.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/app_bar_widget.dart';
 
 class CriaContaPage extends StatelessWidget {

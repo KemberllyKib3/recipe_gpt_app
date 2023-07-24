@@ -1,5 +1,5 @@
-import 'package:recipe_gpt/domain/models/models.dart';
+import 'package:recipe_gpt/domain/entities/entities.dart';
 
 abstract class ChatService {
-  Future<Message> send({required String command});
+  Future<Message> send(String command);
 }

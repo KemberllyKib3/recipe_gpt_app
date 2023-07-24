@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_gpt/presentation/screens/meal_planner/widgets/counter_widget.dart';
 import 'package:recipe_gpt/presentation/screens/response/response_page.dart';
-import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/shared/constants.dart';
 import 'package:recipe_gpt/shared/enums/enums.dart';
 import 'package:recipe_gpt/presentation/shared/utils/widget_functions.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/button_widget.dart';

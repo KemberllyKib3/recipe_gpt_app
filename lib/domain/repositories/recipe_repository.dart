@@ -1,10 +1,17 @@
-import 'package:recipe_gpt/domain/models/models.dart';
+import 'package:recipe_gpt/domain/entities/entities.dart';
 
 abstract class RecipeRepository {
-  Future<void> save({Recipe? recipe});
-  Future<void> delete({required String id});
-  Future<Recipe?> get({required String id});
-  Future<bool> hasRecipe({required String? id});
-  Future<List<Recipe>> getAll({required int offset, required int limit});
-  Future<List<Recipe>> search({required String query});
+  Future<void> save(Recipe recipe);
+
+  Future<void> delete(String id);
+
+  Future<Recipe> get(String id);
+
+  Future<bool> hasRecipe(String? id);
+
+  Future<List<Recipe>> getRecipes(
+    String? search, {
+    required int offset,
+    required int limit,
+  });
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_gpt/presentation/screens/drawer/drawer_page.dart';
 import 'package:recipe_gpt/presentation/screens/home/widgets/home_body.dart';
-import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/shared/constants.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/app_bar_widget.dart';
 
 class HomePage extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_gpt/presentation/screens/login/login_page.dart';
-import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/shared/constants.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/button_widget.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/text_field_widget.dart';
 

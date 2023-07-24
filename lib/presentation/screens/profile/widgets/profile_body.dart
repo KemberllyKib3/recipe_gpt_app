@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_gpt/presentation/screens/profile/widgets/text_field_tile_widget.dart';
-import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/shared/constants.dart';
 import 'package:recipe_gpt/shared/enums/cook_level_enum.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/item_chip_widget.dart';
 

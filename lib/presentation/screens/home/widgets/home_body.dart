@@ -6,7 +6,7 @@ import 'package:recipe_gpt/presentation/screens/meal_planner/meal_planner_page.d
 import 'package:recipe_gpt/presentation/screens/my_fridge/my_fridge_page.dart';
 import 'package:recipe_gpt/presentation/screens/romantic_dinner/romantic_dinner_page.dart';
 import 'package:recipe_gpt/presentation/screens/surprise_dish/surprise_dish_page.dart';
-import 'package:recipe_gpt/presentation/shared/widgets/assets.dart';
+import 'package:recipe_gpt/shared/assets.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});

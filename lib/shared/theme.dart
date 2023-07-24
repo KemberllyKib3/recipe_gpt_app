@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:recipe_gpt/presentation/shared/app_colors.dart';
+import 'package:recipe_gpt/shared/app_colors.dart';
 
 const String appName = 'Recipe GPT';
 

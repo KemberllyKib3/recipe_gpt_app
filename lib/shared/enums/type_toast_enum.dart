@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_gpt/presentation/shared/app_colors.dart';
+import 'package:recipe_gpt/shared/app_colors.dart';
 
 enum TypeToastEnum {
   success(AppColors.success, AppColors.black),

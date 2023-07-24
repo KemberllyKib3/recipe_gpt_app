@@ -1,4 +1,4 @@
-import 'package:recipe_gpt/presentation/shared/widgets/assets.dart';
+import 'package:recipe_gpt/shared/assets.dart';
 
 enum TypeCommandEnum {
   fridgeCommand("can you give me a recipe with what I have in my fridge?"),
@@ -23,6 +23,12 @@ enum TypeCommandEnum {
         return "";
     }
   }
+
+  bool get isRecipeCommand =>
+      this == TypeCommandEnum.fridgeCommand ||
+      this == TypeCommandEnum.surpriseDishCommand ||
+      this == TypeCommandEnum.romanticDinnerCommand;
+
 
   final String _label;
   const TypeCommandEnum(this._label);

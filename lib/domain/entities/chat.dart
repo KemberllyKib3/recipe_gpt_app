@@ -1,4 +1,4 @@
-import 'package:recipe_gpt/domain/models/models.dart';
+import 'package:recipe_gpt/domain/entities/entities.dart';
 
 class Chat {
   List<Message> messages;

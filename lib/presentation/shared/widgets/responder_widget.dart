@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:recipe_gpt/presentation/shared/constants.dart';
+import 'package:recipe_gpt/shared/constants.dart';
 import 'package:recipe_gpt/shared/enums/enums.dart';
 import 'package:recipe_gpt/presentation/shared/utils/widget_functions.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/custom_toast_widget.dart';

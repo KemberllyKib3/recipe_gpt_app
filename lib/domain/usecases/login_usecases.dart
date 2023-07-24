@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
-import 'package:recipe_gpt/domain/models/user.dart';
+import 'package:recipe_gpt/domain/entities/user.dart';
 import 'package:recipe_gpt/domain/repositories/user_repository.dart';
 import 'package:recipe_gpt/domain/services/login_service.dart';
 import 'package:recipe_gpt/exceptions/failure.dart';
@@ -24,7 +24,7 @@ class LoginUsecases {
         lastName: 'Doe',
         email: 'teste@teste.com',
       );
-      await userRepository.save(user: user);
+      await userRepository.save(user);
 
       return Right(user);
     } on Failure catch (error, stackTrace) {
@@ -52,7 +52,7 @@ class LoginUsecases {
         lastName: lastName,
         email: email,
       );
-      await userRepository.save(user: user);
+      await userRepository.save(user);
 
       return Right(user);
     } on Failure catch (error, stackTrace) {

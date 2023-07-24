@@ -1,0 +1,35 @@
+Can you help me to find a personalized recipe with what I have in my home?
+
+I have [ingredients] in my fridge and [appliances] appliances in my kitchen.
+I am a [level] cook I have only [time] minutes to cook.
+You are able to [creativity].
+
+Also give me tips and suggetions about this dish
+and how to organize and storage.
+
+
+User this json format to answer:
+- [dificulty] can be: [easy, medium, hard, expert]
+{
+    "title": "[title]",
+    "description": "[description]",
+    "dificulty": "[dificulty]",
+    "time": "[time]",
+    "ingredients": [
+        [ingredient]
+    ],
+    "instructions": [
+        [step]
+    ],
+    "nutrition_facts": {
+        "calories": [calories]
+        "fat": [fat]
+        "carbohydrates": [carbohydrates]
+        "sugar": [sugar]
+        "protein": [protein]
+    }
+    "servings": [servings]
+    "tips_suggestions": [tips],
+    "storage_organization": "[storeOrganization]"
+    "isFreezeble": [bool]
+}

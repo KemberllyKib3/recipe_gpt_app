@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:recipe_gpt/presentation/screens/login/widgets/login_body.dart';
-import 'package:recipe_gpt/presentation/shared/constants.dart';
-import 'package:recipe_gpt/presentation/shared/widgets/assets.dart';
+import 'package:recipe_gpt/shared/constants.dart';
+import 'package:recipe_gpt/shared/assets.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

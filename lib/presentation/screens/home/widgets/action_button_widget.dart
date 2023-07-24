@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:recipe_gpt/presentation/shared/app_colors.dart';
-import 'package:recipe_gpt/presentation/shared/widgets/assets.dart';
+import 'package:recipe_gpt/shared/app_colors.dart';
+import 'package:recipe_gpt/shared/assets.dart';
 
 class ActionButtonWidget extends StatelessWidget {
   final String label;
