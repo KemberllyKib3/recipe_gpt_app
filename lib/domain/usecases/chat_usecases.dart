@@ -17,7 +17,58 @@ class ChatUsecases {
     required this.commandService,
   });
 
-  Future<Either<Failure, Message>> sendMessage({
+  Future<Either<Failure, List<Message>>> startChat() async {
+    return Left(ServerFailure(message: 'Not implemented'));
+    // try {
+    //   final message = await chatService.start();
+
+    //   return Right(message);
+    // } on Failure catch (error, stackTrace) {
+    //   log(
+    //     error.toString(),
+    //     time: DateTime.now(),
+    //     name: 'ChatUsecases.startChat',
+    //     stackTrace: stackTrace,
+    //   );
+    //   return Left(ServerFailure(message: error.toString()));
+    // }
+  }
+
+  Future<Either<Failure, List<Message>>> regenerateChat() async {
+    return Left(ServerFailure(message: 'Not implemented'));
+    // try {
+    //   final message = await chatService.regenerate();
+
+    //   return Right(message);
+    // } on Failure catch (error, stackTrace) {
+    //   log(
+    //     error.toString(),
+    //     time: DateTime.now(),
+    //     name: 'ChatUsecases.regenerateChat',
+    //     stackTrace: stackTrace,
+    //   );
+    //   return Left(ServerFailure(message: error.toString()));
+    // }
+  }
+
+  Future<Either<Failure, List<Message>>> closeChat() async {
+    return Left(ServerFailure(message: 'Not implemented'));
+    // try {
+    //   final message = await chatService.close();
+
+    //   return Right(message);
+    // } on Failure catch (error, stackTrace) {
+    //   log(
+    //     error.toString(),
+    //     time: DateTime.now(),
+    //     name: 'ChatUsecases.closeChat',
+    //     stackTrace: stackTrace,
+    //   );
+    //   return Left(ServerFailure(message: error.toString()));
+    // }
+  }
+
+  Future<Either<Failure, List<Message>>> sendMessage({
     required Command command,
   }) async {
     try {
@@ -26,7 +77,7 @@ class ChatUsecases {
 
       final message = await chatService.send(commandString);
 
-      return Right(message);
+      return Right([message]);
     } on Failure catch (error, stackTrace) {
       log(
         error.toString(),

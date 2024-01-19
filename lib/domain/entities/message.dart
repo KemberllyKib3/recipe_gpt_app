@@ -10,6 +10,16 @@ class Message {
   final TypeSenderEnum sender;
   final bool isError;
 
+  String get toClipboard {
+    if (recipe != null) {
+      return recipe!.toClipboard;
+    } else if (mealPlan != null) {
+      return mealPlan!.toClipboard;
+    } else {
+      return text!;
+    }
+  }
+
   Message({
     this.text,
     this.recipe,
@@ -18,11 +28,7 @@ class Message {
     this.isError = false,
     required this.sentAt,
     required this.sender,
-  }) {
-    assert(sender == TypeSenderEnum.user && (command != null || text != null));
-    assert(sender == TypeSenderEnum.ai &&
-        (recipe != null || mealPlan != null || text != null));
-  }
+  });
 
   factory Message.user({
     required String text,

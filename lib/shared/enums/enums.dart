@@ -8,3 +8,4 @@ export 'type_response_enum.dart';
 export 'type_command_enum.dart';
 export 'type_toast_enum.dart';
 export 'type_sender_enum.dart';
+export 'type_recipe_info_enum.dart';

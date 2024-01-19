@@ -8,8 +8,8 @@ class Assets {
   static String openAiLogo = 'assets/icons/svg/openAiLogo.svg';
   
   // Scripts
-  static String fridgeCommand = 'assets/icons/scripts/fridge_script.txt';
-  static String mealPlanCommand = 'assets/icons/scripts/meal_planner_script.txt';
-  static String surpriseDishCommand = 'assets/icons/scripts/surprise_dish_script.txt';
-  static String romanticDinnerCommand = 'assets/icons/scripts/romantic_dinner_script.txt';
+  static String fridgeCommand = 'assets/scripts/fridge_script.txt';
+  static String mealPlanCommand = 'assets/scripts/meal_planner_script.txt';
+  static String surpriseDishCommand = 'assets/scripts/surprise_dish_script.txt';
+  static String romanticDinnerCommand = 'assets/scripts/romantic_dinner_script.txt';
 }

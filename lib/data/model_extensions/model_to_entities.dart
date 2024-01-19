@@ -27,7 +27,10 @@ extension ParseRecipe on RecipeModel? {
         time: this!.time,
         instructions: this!.instructions.toList(),
         ingredients: this!.ingredients.map((e) => Ingredient(code: e)).toList(),
-        nutritionalFacts: null,
+        nutritionFacts: null,
+        isFreezeble: this!.isFreezeble,
+        servings: this!.servings,
+        tips: this!.tips,
       );
 }
 
@@ -47,7 +50,6 @@ extension ParseMealPlan on MealPlanModel? {
         id: this!.id,
         title: this!.title,
         description: this!.description,
-        kcalGoal: this!.kcalGoal,
         nDays: this!.nDays,
         nMeals: this!.nMeals,
         recipes: [],

@@ -18,7 +18,6 @@ extension ParseUserModel on User? {
 
 extension ParseRecipeModel on Recipe? {
   RecipeModel get parse => RecipeModel(
-        tipsSuggestions: "",
         id: this!.id!,
         title: this!.title,
         description: this!.description,
@@ -26,7 +25,10 @@ extension ParseRecipeModel on Recipe? {
         time: this!.time,
         instructions: this!.instructions,
         ingredients: this!.ingredients.map((e) => e.code),
-        nutritionalFactsId: this!.nutritionalFacts!.recipeId,
+        tips: this!.tips,
+        isFreezeble: this!.isFreezeble,
+        servings: this!.servings,
+        nutritionFactsId: this!.nutritionFacts!.recipeId,
       );
 }
 
@@ -46,7 +48,6 @@ extension ParseMealPlanModel on MealPlan? {
         id: this!.id!,
         title: this!.title!,
         description: this!.description,
-        kcalGoal: this!.kcalGoal!,
         nDays: this!.nDays!,
         nMeals: this!.nMeals!,
         recipeIds: this!.recipes.map((e) => e.id!),

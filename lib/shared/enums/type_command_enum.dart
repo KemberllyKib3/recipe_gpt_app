@@ -5,6 +5,8 @@ enum TypeCommandEnum {
   mealPlanCommand("can you give me a meal plan?"),
   surpriseDishCommand("can you surprise me with a dish?"),
   romanticDinnerCommand("can you give me a recipe for a romantic dinner?"),
+  retrieveCommand("can you remember about "),
+  changeRecipeCommand("can you change the recipe?"),
   freeTextCommand("");
 
   String get label => _label;

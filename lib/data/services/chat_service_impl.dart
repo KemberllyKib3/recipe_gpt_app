@@ -1,6 +1,5 @@
 import 'package:recipe_gpt/domain/entities/message.dart';
 import 'package:recipe_gpt/domain/services/chat_service.dart';
-import 'package:recipe_gpt/shared/constants.dart';
 
 class ChatServiceImpl implements ChatService {
   @override

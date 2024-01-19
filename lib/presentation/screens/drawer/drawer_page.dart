@@ -5,7 +5,6 @@ import 'package:recipe_gpt/presentation/screens/login/login_page.dart';
 import 'package:recipe_gpt/presentation/screens/profile/profile_page.dart';
 import 'package:recipe_gpt/shared/constants.dart';
 import 'package:recipe_gpt/presentation/shared/utils/widget_functions.dart';
-import 'package:recipe_gpt/shared/assets.dart';
 
 class DrawerPage extends StatelessWidget {
   const DrawerPage({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_gpt/presentation/screens/response/widgets/response_body.dart';
+import 'package:recipe_gpt/presentation/screens/chat/widgets/chat_body.dart';
 import 'package:recipe_gpt/shared/enums/enums.dart';
 import 'package:recipe_gpt/presentation/shared/widgets/app_bar_widget.dart';
 
@@ -26,7 +26,6 @@ class _ResponsePageState extends State<ResponsePage> {
       appBar: AppBarWidget.primary(title: widget.title),
       body: ResponseBody(
         initialText: widget.typeCommand.label,
-        typeOfResponse: widget.typeOfResponse,
       ),
     );
   }

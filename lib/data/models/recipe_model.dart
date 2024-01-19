@@ -6,8 +6,10 @@ class RecipeModel {
   final int time;
   final Iterable<String> ingredients;
   final Iterable<String> instructions;
-  final String tipsSuggestions;
-  final String nutritionalFactsId;
+  final String tips;
+  final bool isFreezeble;
+  final int servings;
+  final String nutritionFactsId;
 
   RecipeModel({
     required this.id,
@@ -17,7 +19,9 @@ class RecipeModel {
     required this.time,
     required this.ingredients,
     required this.instructions,
-    required this.tipsSuggestions,
-    required this.nutritionalFactsId,
+    required this.tips,
+    required this.isFreezeble,
+    required this.servings,
+    required this.nutritionFactsId,
   });
 }
